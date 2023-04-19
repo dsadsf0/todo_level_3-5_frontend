@@ -1,0 +1,15 @@
+.btn {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 10px;
+  border: 2px solid;
+  color: var(--main-link-c);
+  transition-duration: .2s;
+  text-transform: uppercase;
+
+  &:hover {
+    color: var(--main-link-c-hover);
+  }
+}

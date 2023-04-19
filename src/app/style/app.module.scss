@@ -1,0 +1,14 @@
+.app {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  padding-top: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 40px;
+  padding: 40px 0;
+}

@@ -1,0 +1,55 @@
+:root {
+  --main-bgc: #141414;
+  --main-title-c: #e4c34c;
+  --main-text-c: #a89b6b;
+  --main-link-c: #b69c3d;
+  --main-link-c-hover: #dbc884;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  display: block;
+  width: fit-content;
+  background-color: transparent;
+  outline: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--main-bgc);
+  color: var(--main-text-c);
+  font-weight: 400;
+  min-height: 100vh;
+  position: relative;
+}
+
+*::-webkit-scrollbar {
+  width: 13px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--main-bgc);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #383838;
+  border-radius: 4px;
+}
