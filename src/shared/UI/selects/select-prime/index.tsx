@@ -4,7 +4,7 @@ import BaseProps from 'shared/types/BaseProps'
 import classNameCheck from 'shared/libs/helpers/classNameCheck';
 
 interface Props extends BaseProps {
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
+  onChange: (e: number) => void,
   options: readonly {value: number, name: string}[],
   name: string,
   selected: string
@@ -12,16 +12,27 @@ interface Props extends BaseProps {
 
 const SelectPrime = ({ onChange, className, options, name, selected }: Props) => {
   const [isActive, setIsActive] = useState(false)
+  
+  const toggleHandler = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setIsActive(prev => !prev)
+  }
 
-  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    onChange(e)
+  const closeHandler = (e: React.MouseEvent) => {
+    e.stopPropagation();
     setIsActive(false)
   }
+  
+  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.stopPropagation();
+    onChange(+e.target.value)
+  }
+
 
   return (
     <div
       className={classNameCheck(cl.select, className, isActive ? cl._active : '' )}
-      onClick={() => setIsActive(prev => !prev)}
+      onClick={toggleHandler}
     >
       <span>{selected}</span>
       <div className={cl.select__wrapper}>
@@ -30,13 +41,14 @@ const SelectPrime = ({ onChange, className, options, name, selected }: Props) =>
             <label 
               className={cl.select__option}
               key={filter.value}
+              onClick={closeHandler}
             >
               {filter.name}
               <input
                 type='radio'
                 name={name}
                 value={filter.value}
-                onChange={e => onChangeHandler(e)}
+                onChange={onChangeHandler}
               />
             </label>
           )

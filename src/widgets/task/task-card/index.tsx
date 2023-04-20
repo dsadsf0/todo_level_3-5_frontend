@@ -20,7 +20,7 @@ const TaskCard = ({ className, task }: Props) => {
       <ParagraphPrime className={cl.task__text}>{task.description}</ParagraphPrime>
       <div className={cl.task__footer}>
         <LinkPrimeBtn to={`/edit/${task.id}`}>Edit</LinkPrimeBtn>
-        <ToggleTask task={task}>{task.completed ? "uncomplete" : "complete"}</ToggleTask>
+        <ToggleTask className={cl.task__complete} task={task}>{task.completed ? "uncomplete" : "complete"}</ToggleTask>
         <DeleteTask task={task}>Delete</DeleteTask>
       </div>
     </div>

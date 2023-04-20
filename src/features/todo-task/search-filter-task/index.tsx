@@ -31,7 +31,8 @@ const SearchFilterTask = ({ setFilter, filterOptions, searchQuery, setSearchQuer
         placeholder='Search task'
       />
       <SelectPrime
-        onChange={e => changeFilter(+e.target.value)}
+        className={cl.options__select}
+        onChange={changeFilter}
         options={filterOptions}
         name='task-filter'
         selected={currentFilter.name}
