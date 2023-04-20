@@ -1,13 +1,11 @@
 import React from 'react'
 import cl from './taskCard.module.scss'
-import BtnPrime from 'shared/UI/buttons/btn-prime'
 import LinkPrimeBtn from 'shared/UI/links/link-prime-btn'
 import ParagraphPrime from 'shared/UI/paragraphs/paragraph-prime'
 import TitlePrime from 'shared/UI/titles/title-prime'
 import BaseProps from 'shared/types/BaseProps'
 import ITodo from 'shared/types/ITodo'
 import classNameCheck from 'shared/libs/helpers/classNameCheck'
-import { useDeleteTask, useToggleTaskComplete } from 'entities/todo-task/hooks'
 import DeleteTask from 'features/todo-task/delete-task'
 import ToggleTask from 'features/todo-task/toggle-task-complete'
 
