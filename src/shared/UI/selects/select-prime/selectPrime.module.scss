@@ -9,7 +9,7 @@
   color: var(--main-link-c);
   position: relative;
   width: 150px;
-
+  
   &::after {
     content: '';
     position: absolute;
@@ -19,6 +19,13 @@
     border: 5px solid transparent;
     border-top: 8px solid var(--main-link-c);
     transition-duration: .2s;
+  }
+
+  &:hover {
+    border-color: var(--main-link-c-hover);
+    &::after {
+      border-top-color: var(--main-link-c-hover);
+    }
   }
   
   span {
