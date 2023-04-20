@@ -1,0 +1,25 @@
+.task {
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 374px) {
+      flex-direction: column;
+      row-gap: 15px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    margin-left: auto;
+  }
+}

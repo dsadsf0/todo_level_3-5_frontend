@@ -1,0 +1,16 @@
+.input {
+  display: block;
+  background-color: transparent;
+  outline: 0;
+  border: 1px solid var(--main-link-c);
+  border-radius: 8px;
+  padding: 10px;
+  color: var(--main-link-c);
+
+  &:focus, &:hover {
+    border-color: var(--main-link-c-hover);
+  }
+  &::placeholder {
+    color: var(--main-link-c);
+  }
+}
