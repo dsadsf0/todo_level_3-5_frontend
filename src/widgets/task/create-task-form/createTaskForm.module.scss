@@ -6,4 +6,13 @@
   &__btn {
     align-self: flex-end;
   }
+
+  ._err {
+    border-color: var(--main-err-c);
+
+    &:hover {
+      border-color: var(--main-err-c);
+    }
+    &::placeholder {color: var(--main-err-c);}
+  }
 }

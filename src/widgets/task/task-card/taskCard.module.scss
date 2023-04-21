@@ -22,8 +22,23 @@
     }
   }
 
-  &__text {
+  &__content {
+    margin-bottom: 10px;
+  }
+
+  &__due {
+    font-size: 12px;
+    color: var(--main-title-c);
+    font-weight: 600;
     margin-bottom: 20px;
+    
+    &_overdue {
+      color: var(--main-err-c);
+    }
+  }
+
+  &__overdue {
+    color: var(--main-err-c);
   }
 
   &__btn {

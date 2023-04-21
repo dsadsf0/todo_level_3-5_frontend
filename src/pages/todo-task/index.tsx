@@ -1,20 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import cl from './todoTask.module.scss'
-import { useAppSelector} from 'app/hooks/useStore'
-import { selectTodos } from '../../shared/store/todos';
 import { useParams } from 'react-router-dom'
 import TaskCard from 'widgets/task/task-card'
+import ITask from 'shared/types/ITask';
+import useFetching from 'shared/hooks/fetching';
+import TaskService from 'entities/todo-task/api';
+import Loader from 'shared/UI/loader';
 
 const TodoTask = () => {
-  const taskId = +(useParams().id || 1)
-  const task = useAppSelector(selectTodos).find(todo => todo.id === taskId)
+  const taskId = useParams().id || '1'
 
-  if (!task) return null
+
 
   return (
     <TaskCard
       className={cl['task-card']}
-      task={task}
+      task_id={taskId}
     />
   )
 }

@@ -4,7 +4,7 @@ import cl from './inputPrime.module.scss'
 import classNameCheck from 'shared/libs/helpers/classNameCheck'
 
 interface Props extends BaseProps {
-  type: 'text' | 'email' | 'password' | 'search' | 'tel',
+  type: 'text' | 'email' | 'password' | 'search' | 'tel' | 'datetime-local',
   placeholder?: string,
   value: string;
   defaultValue?: string,

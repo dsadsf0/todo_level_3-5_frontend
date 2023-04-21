@@ -29,5 +29,9 @@
     margin-bottom: 15px;
     text-align: center;
     &:last-child{ margin-bottom: 0;}
+
+    &_overdue {
+      color: var(--main-err-c);
+    }
   }
 }

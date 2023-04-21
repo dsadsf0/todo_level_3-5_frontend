@@ -4,6 +4,7 @@
   --main-text-c: #a89b6b;
   --main-link-c: #b69c3d;
   --main-link-c-hover: #dbc884;
+  --main-err-c: #bb2a2a;
 }
 
 *, *::before, *::after {
