@@ -8,11 +8,11 @@
   }
 
   ._err {
-    border-color: var(--main-err-c);
+    border-color: var(--main-err-c) !important;
 
     &:hover {
-      border-color: var(--main-err-c);
+      border-color: var(--main-err-c) !important;
     }
-    &::placeholder {color: var(--main-err-c);}
+    &::placeholder {color: var(--main-err-c) !important;}
   }
 }

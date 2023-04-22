@@ -50,7 +50,7 @@ const TaskCard = ({ className, task_id }: Props) => {
           )
         }
       </div>
-      <ParagraphPrime className={`${cl.task__due} ${isOverdue(task.due_date) ? cl.task__due_overdue : ''}`}>
+      <ParagraphPrime className={`${cl.task__due} ${isOverdue(task.due_date, task.completed_at) ? cl.task__due_overdue : ''}`}>
         Due to: {getTextDate(task.due_date)}
       </ParagraphPrime>
       

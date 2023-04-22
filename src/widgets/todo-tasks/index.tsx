@@ -36,7 +36,7 @@ const TodoTasks = () => {
           searchedFiltredTasks.map(task => 
             <LinkPrime
               to={`/task/${task.id}`} 
-              className={`${cl.list__link} ${isOverdue(task.due_date) ? cl.list__link_overdue : ''}`}
+              className={`${cl.list__link} ${isOverdue(task.due_date, task.completed_at) ? cl.list__link_overdue : ''}`}
               key={task.id}
             >
               {task.title}

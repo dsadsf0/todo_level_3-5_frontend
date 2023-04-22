@@ -31,7 +31,11 @@
     &:last-child{ margin-bottom: 0;}
 
     &_overdue {
-      color: var(--main-err-c);
+      color: var(--main-err-c) !important;
+
+      &:hover {
+        color: var(--main-link-c) !important;
+      }
     }
   }
 }

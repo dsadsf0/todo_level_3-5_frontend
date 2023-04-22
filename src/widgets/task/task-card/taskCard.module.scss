@@ -27,19 +27,16 @@
   }
 
   &__due {
-    font-size: 12px;
-    color: var(--main-title-c);
-    font-weight: 600;
-    margin-bottom: 20px;
+    font-size: 12px !important;
+    color: var(--main-title-c) !important;
+    font-weight: 600 !important;
+    margin-bottom: 20px !important;
     
     &_overdue {
-      color: var(--main-err-c);
+      color: var(--main-err-c) !important;
     }
   }
 
-  &__overdue {
-    color: var(--main-err-c);
-  }
 
   &__btn {
     margin-left: auto;
