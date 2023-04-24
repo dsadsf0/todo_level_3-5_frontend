@@ -10,7 +10,6 @@ import useFetching from 'shared/hooks/fetching'
 import TaskService from 'entities/todo-task/api'
 import { useNavigate } from 'react-router-dom'
 import Loader from 'shared/UI/loader'
-import getNowDate from 'shared/libs/helpers/datesHelp'
 
 interface Props extends BaseProps {}
 
